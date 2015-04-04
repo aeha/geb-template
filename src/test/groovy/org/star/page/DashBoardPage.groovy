@@ -1,6 +1,7 @@
 package org.star.page
 
 import geb.Page
+import org.star.module.LoginHeaderModule
 
 class DashBoardPage extends Page{
     static url = "home"
@@ -9,5 +10,10 @@ class DashBoardPage extends Page{
     }
 
     static content = {
+        header(required:true) {module LoginHeaderModule}
+    }
+
+    def clickUser(){
+        header.admin.click()
     }
 }

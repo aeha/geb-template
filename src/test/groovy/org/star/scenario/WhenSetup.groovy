@@ -16,6 +16,9 @@ class WhenSetup extends GebReportingSpec {
         login "admin", "admin"
         then: "ダッシュボード画面が表示される"
         at DashBoardPage
+        when: "Adminをクリックすると"
+        clickUser()
+        then: "ユーザが表示される"
     }
 
 }

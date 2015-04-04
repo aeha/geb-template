@@ -1,7 +1,7 @@
 import geb.report.ScreenshotReporter
 
 reportsDir = "build/geb-reports"
-baseUrl = "http://blooming-escarpment-6474.herokuapp.com"
+baseUrl = "http://serene-bayou-9708.herokuapp.com"
 waiting {
     presets {
         slow {
