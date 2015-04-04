@@ -1,6 +1,7 @@
 package org.star.page
 
 import geb.Page
+import org.star.module.NotLoginHeaderModule
 import org.star.module.LoginHeaderModule
 
 class DashBoardPage extends Page{
@@ -15,5 +16,6 @@ class DashBoardPage extends Page{
 
     def clickUser(){
         header.admin.click()
+        header.user.click()
     }
 }

@@ -18,7 +18,19 @@ class WhenSetup extends GebReportingSpec {
         at DashBoardPage
         when: "Adminをクリックすると"
         clickUser()
-        then: "ユーザが表示される"
+        then: "ユーザ画面が表示される"
+        at UserPage
+        when: "作成ボタンをクリックすると"
+        createUser "test1", "test1", "test@mail.com", true
+        then : "ユーザが作成される"
+        successMessage
+//        sleep(1000)
+        getUserItems("test1")
+        updateUser "test2", "test2", "test2@mail.com", false
+
+        successMessage
+        clickLogOut()
+
     }
 
 }
